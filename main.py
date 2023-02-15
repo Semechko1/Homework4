@@ -1,21 +1,19 @@
-class Coder1:
+class Class1:
+    def part_a(self):
+        self.a = input("Item 1 - ")
+
+
+class Class2:
+    def part_b(self):
+        self.b = input("Item 2 - ")
+
+
+class Class3(Class1, Class2):
     def __init__(self):
-        self.a = int(input("Number A - "))
-        self.b = int(input("Number B - "))
-
-    def ret_numb(self):
-        c = int(self.a + self.b)
-        d = int(self.a - self.b)
-        return c * d
+        print("This code combines two strings from different classes together!")
+        self.part_a()
+        self.part_b()
+        print(self.a + self.b)
 
 
-class Coder2:
-    def __init__(self, c):
-        self.d = c / 2
-    def ret_numb(self):
-        return self.d
-
-
-math = Coder1()
-math2 = Coder2(math.ret_numb())
-print(math2.ret_numb())
+object3 = Class3()
